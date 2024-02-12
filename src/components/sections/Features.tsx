@@ -1,6 +1,3 @@
-import { Carousel as MantineCarousel } from "@mantine/carousel";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
-
 function Features() {
   return (
     <div className="flex flex-col py-20 gap-y-10">
@@ -27,7 +24,7 @@ function Features() {
             Creating personalized invitations
           </h2>
           <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6">
-            EventBadge's invitation builder allows you to personalize each
+            EventBadge&apos;s invitation builder allows you to personalize each
             invitation based on the specific needs of your event. You can
             generate unique QR codes for each guest, ensuring quick and secure
             identification during check-in.
@@ -50,7 +47,7 @@ function Features() {
             When your guests arrive at the event, the application offers a
             simple and efficient signature validation function. The unique QR
             codes on the invitations can be quickly scanned to confirm each
-            attendee's attendance, providing a seamless and hassle-free
+            attendee&apos;s attendance, providing a seamless and hassle-free
             experience.
           </span>
         </div>
