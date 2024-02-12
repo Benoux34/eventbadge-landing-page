@@ -12,6 +12,7 @@ import Features from "@/components/sections/Features";
 import Pricing from "@/components/sections/Pricing";
 
 export default function Home() {
+  // Smooth scroll
   const lenisRef = React.useRef<typeof ReactLenis>(null);
 
   React.useEffect(() => {
@@ -25,6 +26,32 @@ export default function Home() {
       gsap.ticker.remove(update);
     };
   });
+
+  // Loading screen
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    setTimeout(() => setIsLoading(true), 1000);
+  }, []);
+
+  if (!isLoading) {
+    return (
+      <div className="relative h-screen overflow-hidden">
+        <div className="absolute top-5 left-5 flex items-center justify-start text-2xl">
+          <span>Event</span>
+          <span className="font-bold text-blue-500">Badge</span>
+        </div>
+
+        <div className="h-full flex items-center justify-center">
+          <span className="text-9xl text-blue-500 font-semibold">Welcome</span>
+        </div>
+
+        <div className="absolute bottom-5 right-5 font-semibold text-blue-500 text-2xl">
+          <span>Loading</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <ReactLenis root ref={lenisRef}>
