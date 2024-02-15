@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "@mantine/carousel/styles.css";
+// Mantine
 import { MantineProvider } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });

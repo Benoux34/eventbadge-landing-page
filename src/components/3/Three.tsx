@@ -1,17 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 // 3D
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, useProgress } from "@react-three/drei";
 // Shader
 import vertex from "../../../utils/shader/vertex";
 import fragment from "../../../utils/shader/fragment";
 // Animation
 import { motion } from "framer-motion-3d";
 
-function Effect() {
+type Props = {
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function Effect({ setIsLoading }: Props) {
   const ref = React.useRef<any>();
+  const { progress } = useProgress();
   const [scrollPosition, setScrollPosition] = React.useState(0);
 
   const handleScroll = () => {
@@ -26,8 +31,6 @@ function Effect() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  console.log(scrollPosition);
 
   const uniforms = React.useMemo(() => {
     return {
@@ -48,6 +51,8 @@ function Effect() {
     }
   });
 
+  if (progress === 100) setTimeout(() => setIsLoading(true), 500);
+
   return (
     <motion.mesh ref={ref}>
       <planeGeometry args={[10, 10, 256, 256]} />
@@ -61,14 +66,14 @@ function Effect() {
   );
 }
 
-export default function Three() {
+export default function Three({ setIsLoading }: Props) {
   return (
     <div className="absolute top-0 h-[200vh] w-full -z-10">
       <Canvas>
-        <OrbitControls />
-        <Environment preset="city" />
-
-        <Effect />
+        <Suspense fallback={null}>
+          <Environment preset="city" />
+          <Effect setIsLoading={setIsLoading} />
+        </Suspense>
       </Canvas>
     </div>
   );

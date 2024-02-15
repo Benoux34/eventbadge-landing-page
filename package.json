@@ -9,9 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/carousel": "^7.5.1",
     "@mantine/core": "^7.5.1",
-    "@radix-ui/react-slot": "^1.0.2",
     "@react-three/drei": "^9.97.0",
     "@react-three/fiber": "^8.15.16",
     "@studio-freight/react-lenis": "^0.0.43",
@@ -19,6 +17,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "embla-carousel-react": "^7.1.0",
+    "framer-motion": "^11.0.5",
     "framer-motion-3d": "^11.0.3",
     "glslify-loader": "^2.0.0",
     "gsap": "^3.12.5",

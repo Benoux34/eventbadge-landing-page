@@ -6,7 +6,7 @@ function Features() {
           <img src="./Dashboard.png" className="object-fit rounded-xl" />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-lg md:text-3xl mb-4">
+          <h2 className="text-lg md:text-4xl mb-4">
             Easy import of participants
           </h2>
           <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6">
