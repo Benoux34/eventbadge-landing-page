@@ -47,7 +47,7 @@ function Features() {
               styles to suit your preferences. Additionally, EventBadge enables
               you to personalize each invitation with attendee-specific details,
               such as their name, affiliation, or special instructions, ensuring
-              that each guest feels valued and appreciated. Whether you're
+              that each guest feels valued and appreciated. Whether you&apos;re
               hosting a corporate conference or a social celebration, our
               intuitive invitation creation tools empower you to make a lasting
               impression on your guests from the moment they receive their
@@ -102,7 +102,7 @@ function Features() {
               participants through its integrated messaging feature. With the
               ability to send bulk emails or targeted messages to specific
               attendee groups, EventBadge enables seamless communication before,
-              during, and after the event. Whether it's sharing important
+              during, and after the event. Whether it&apos;s sharing important
               updates, sending reminders, or soliciting feedback, our platform
               provides a convenient and centralized communication hub. Moreover,
               EventBadge offers customizable email templates and scheduling
