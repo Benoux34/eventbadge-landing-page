@@ -63,13 +63,12 @@ export default function Home() {
 
             <div className="bg-gradient-to-b from-blue-600 to-blue-800 max-w-screen px-4 py-8 lg:py-28 lg:px-6 mt-20 mx-auto">
               <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12 text-white">
-                <h2 className="mb-4 text-4xl tracking-tight font-bold">
+                <h2 className="mb-4 text-6xl tracking-tight font-bold">
                   The price of Event<span className="text-blue-300">Badge</span>
                 </h2>
                 <p className="mb-5 font-light text-white sm:text-xl">
-                  Here at Flowbite we focus on markets where technology,
-                  innovation, and capital can unlock long-term value and drive
-                  economic growth.
+                  The pricing for EventBadge plans varies depending on your
+                  needs. Choose the plan that best suits you.
                 </p>
               </div>
               <Pricing />
