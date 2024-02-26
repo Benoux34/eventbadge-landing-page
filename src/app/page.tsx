@@ -61,7 +61,7 @@ export default function Home() {
 
             <Features />
 
-            <div className="bg-gradient-to-b from-blue-600 to-blue-800 max-w-screen px-4 py-8 lg:py-28 lg:px-6 mt-20 mx-auto">
+            <div className="bg-gradient-to-b from-blue-600 to-blue-800 max-w-screen px-4 py-8 lg:py-28 lg:px-6 mt-0 mx-auto">
               <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12 text-white">
                 <h2 className="mb-4 text-6xl tracking-tight font-bold">
                   The price of Event<span className="text-blue-300">Badge</span>

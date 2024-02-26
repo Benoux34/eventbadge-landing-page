@@ -1,13 +1,39 @@
+// Tabs Mantine
+import { Tabs } from "@mantine/core";
+
 function Features() {
   return (
-    <div className="bg-white flex flex-col gap-y-10 py-20 md:py-40 px-5 md:px-20 mx-5 md:mx-20">
-      <div className="">
-        <h2 className="text-4xl md:text-5xl font-semibold">Features</h2>
+    <div className="flex flex-col gap-y-10 pt-10 md:pt-20">
+      <div>
+        <h2 className="text-4xl md:text-6xl text-center font-semibold">
+          Our features
+        </h2>
       </div>
 
-      {/* Features */}
-      <div>
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 pb-0 md:pb-10 pt-0">
+      <Tabs
+        classNames={{
+          root: "relative h-[80vh]",
+          list: "bg-white border rounded-xl p-3 mx-0 md:mx-20",
+          panel:
+            "absolute top-14 md:top-8 bg-gray-100 h-full px-5 md:px-20 -z-10",
+          tabLabel: "text-xs md:text-sm pp-0 md:-1",
+        }}
+        variant="pills"
+        radius="md"
+        defaultValue="first"
+      >
+        <Tabs.List grow>
+          <Tabs.Tab value="first">Easy import of participants</Tabs.Tab>
+          <Tabs.Tab value="second">Creating personalized invitations</Tabs.Tab>
+          <Tabs.Tab value="third">Simplified signature validation</Tabs.Tab>
+          <Tabs.Tab value="fourth">Facilitated communication</Tabs.Tab>
+          <Tabs.Tab value="fifth">Centralized data management</Tabs.Tab>
+        </Tabs.List>
+
+        <Tabs.Panel
+          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
+          value="first"
+        >
           <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
             <img src="./Dashboard.png" className="object-fit rounded-xl" />
           </div>
@@ -27,13 +53,15 @@ function Features() {
               importation process, saving you valuable time and effort.
             </span>
           </div>
-        </div>
+        </Tabs.Panel>
 
-        <div className="py-10">
-          <hr />
-        </div>
-
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10">
+        <Tabs.Panel
+          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
+          value="second"
+        >
+          <div className="w-full md:w-1/2 border border-gray-300 rounded-xl mb-4 md:mb-0">
+            <img src="./Dashboard.png" className="object-fit rounded-xl" />
+          </div>
           <div className="w-full md:w-1/2">
             <h2 className="text-2xl md:text-4xl mb-4">
               Creating personalized invitations
@@ -54,16 +82,11 @@ function Features() {
               invite.
             </span>
           </div>
-          <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
-            <img src="./Dashboard.png" className="object-fit rounded-xl" />
-          </div>
-        </div>
-
-        <div className="py-10">
-          <hr />
-        </div>
-
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10">
+        </Tabs.Panel>
+        <Tabs.Panel
+          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
+          value="third"
+        >
           <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
             <img src="./Dashboard.png" className="object-fit rounded-xl" />
           </div>
@@ -86,13 +109,14 @@ function Features() {
               mind for organizers and attendees alike.
             </span>
           </div>
-        </div>
-
-        <div className="py-10">
-          <hr />
-        </div>
-
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10">
+        </Tabs.Panel>
+        <Tabs.Panel
+          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
+          value="fourth"
+        >
+          <div className="w-full md:w-1/2 border border-gray-300 rounded-xl mb-4 md:mb-0">
+            <img src="./Dashboard.png" className="object-fit rounded-xl" />
+          </div>
           <div className="w-full md:w-1/2">
             <h2 className="text-2xl md:text-4xl mb-4">
               Facilitated communication
@@ -113,16 +137,11 @@ function Features() {
               impactful event experience for all involved.
             </span>
           </div>
-          <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
-            <img src="./Dashboard.png" className="object-fit rounded-xl" />
-          </div>
-        </div>
-
-        <div className="py-10">
-          <hr />
-        </div>
-
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10">
+        </Tabs.Panel>
+        <Tabs.Panel
+          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
+          value="fifth"
+        >
           <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
             <img src="./Dashboard.png" className="object-fit rounded-xl" />
           </div>
@@ -146,8 +165,8 @@ function Features() {
               delivering a seamless and memorable event experience.
             </span>
           </div>
-        </div>
-      </div>
+        </Tabs.Panel>
+      </Tabs>
     </div>
   );
 }
