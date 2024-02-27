@@ -1,173 +1,104 @@
-// Tabs Mantine
-import { Tabs } from "@mantine/core";
+import { Carousel as MantineCarousel } from "@mantine/carousel";
 
 function Features() {
   return (
-    <div className="flex flex-col gap-y-10 pt-10 md:pt-20">
-      <div>
-        <h2 className="text-4xl md:text-6xl text-center font-semibold">
-          Our features
-        </h2>
-      </div>
-
-      <Tabs
-        classNames={{
-          root: "relative h-[80vh]",
-          list: "bg-white border rounded-xl p-3 mx-0 md:mx-20",
-          panel:
-            "absolute top-14 md:top-8 bg-gray-100 h-full px-5 md:px-20 -z-10",
-          tabLabel: "text-xs md:text-sm pp-0 md:-1",
-        }}
-        variant="pills"
-        radius="md"
-        defaultValue="first"
-      >
-        <Tabs.List grow>
-          <Tabs.Tab value="first">Easy import of participants</Tabs.Tab>
-          <Tabs.Tab value="second">Creating personalized invitations</Tabs.Tab>
-          <Tabs.Tab value="third">Simplified signature validation</Tabs.Tab>
-          <Tabs.Tab value="fourth">Facilitated communication</Tabs.Tab>
-          <Tabs.Tab value="fifth">Centralized data management</Tabs.Tab>
-        </Tabs.List>
-
-        <Tabs.Panel
-          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
-          value="first"
-        >
+    <MantineCarousel
+      classNames={{ indicator: "!bg-blue-500" }}
+      align="start"
+      orientation="horizontal"
+      controlSize={30}
+      withControls={false}
+      withIndicators
+      loop
+    >
+      <MantineCarousel.Slide>
+        <div className="h-full bg-white flex flex-col md:flex-row items-center justify-between rounded-xl gap-x-10 pt-5 pb-12 md:py-10 px-5 md:px-20 mx-5 md:mx-20 shadow-blue">
           <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
-            <img src="./Dashboard.png" className="object-fit rounded-xl" />
-          </div>
-          <div className="w-full md:w-1/2 pt-5 md:pt-0">
-            <h2 className="text-2xl md:text-4xl mb-4">
-              Easy import of participants
-            </h2>
-            <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6">
-              EventBadge offers a user-friendly interface that simplifies the
-              import process for participants. You can easily map CSV file
-              columns to corresponding attendee fields, ensuring that all
-              relevant information is accurately captured. Furthermore, our
-              platform supports bulk importation, allowing you to efficiently
-              add large numbers of attendees with just a few clicks. Whether
-              you&apos;re managing a small gathering or a large-scale
-              conference, EventBadge empowers you to streamline your participant
-              importation process, saving you valuable time and effort.
-            </span>
-          </div>
-        </Tabs.Panel>
-
-        <Tabs.Panel
-          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
-          value="second"
-        >
-          <div className="w-full md:w-1/2 border border-gray-300 rounded-xl mb-4 md:mb-0">
-            <img src="./Dashboard.png" className="object-fit rounded-xl" />
+            <img src="./Dashboard.png" className="object-cover rounded-xl" />
           </div>
           <div className="w-full md:w-1/2">
-            <h2 className="text-2xl md:text-4xl mb-4">
+            <h2 className="text-lg md:text-3xl">Easy import of participants</h2>
+            <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6">
+              With EventBadge, you can quickly import a list of attendees from a
+              CSV file or enter them manually. This feature makes contact
+              management easier, saving you time and avoiding errors when
+              creating your guest list.
+            </span>
+          </div>
+        </div>
+      </MantineCarousel.Slide>
+      <MantineCarousel.Slide>
+        <div className="h-full bg-white flex flex-col md:flex-row items-center justify-between rounded-xl gap-x-10 pb-12 pt-5 md:pt-0 md:pb-0 md:py-10 px-5 md:px-20 mx-5 md:mx-20 shadow-blue">
+          <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
+            <img src="./Dashboard.png" className="object-cover rounded-xl" />
+          </div>
+          <div className="w-full md:w-1/2">
+            <h2 className="text-lg md:text-3xl">
               Creating personalized invitations
             </h2>
-            <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6 mb-10">
-              With EventBadge, crafting personalized invitations has never been
-              easier. Our platform offers a range of customizable templates,
-              allowing you to tailor your invitations to match the tone and
-              theme of your event effortlessly. From elegant formal affairs to
-              casual gatherings, you can choose from a variety of designs and
-              styles to suit your preferences. Additionally, EventBadge enables
-              you to personalize each invitation with attendee-specific details,
-              such as their name, affiliation, or special instructions, ensuring
-              that each guest feels valued and appreciated. Whether you&apos;re
-              hosting a corporate conference or a social celebration, our
-              intuitive invitation creation tools empower you to make a lasting
-              impression on your guests from the moment they receive their
-              invite.
+            <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6">
+              EventBadge&apos;s invitation builder allows you to personalize
+              each invitation based on the specific needs of your event. You can
+              generate unique QR codes for each guest, ensuring quick and secure
+              identification during check-in.
             </span>
           </div>
-        </Tabs.Panel>
-        <Tabs.Panel
-          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
-          value="third"
-        >
+        </div>
+      </MantineCarousel.Slide>
+      <MantineCarousel.Slide>
+        <div className="h-full bg-white flex flex-col md:flex-row items-center justify-between rounded-xl gap-x-10 pt-5 pb-12 md:pt-0 md:pb-0 md:py-10 px-5 md:px-20 mx-5 md:mx-20 shadow-blue">
           <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
-            <img src="./Dashboard.png" className="object-fit rounded-xl" />
+            <img src="./Dashboard.png" className="object-cover rounded-xl" />
           </div>
           <div className="w-full md:w-1/2">
-            <h2 className="text-2xl md:text-4xl mb-4 pt-5 md:pt-0">
+            <h2 className="text-lg md:text-3xl">
               Simplified signature validation
             </h2>
             <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6">
-              EventBadge streamlines the process of signature validation with
-              its advanced digital verification system. Through integration with
-              leading authentication technologies, such as blockchain or digital
-              certificates, EventBadge ensures the security and authenticity of
-              participant signatures. Our platform automatically verifies
-              signatures against predefined criteria, flagging any discrepancies
-              or inconsistencies for further review. This streamlined approach
-              eliminates the need for manual validation, reducing the risk of
-              fraudulent entries and ensuring the integrity of your event data.
-              With EventBadge, you can trust that participant signatures are
-              authenticated with accuracy and efficiency, providing peace of
-              mind for organizers and attendees alike.
+              When your guests arrive at the event, the application offers a
+              simple and efficient signature validation function. The unique QR
+              codes on the invitations can be quickly scanned to confirm each
+              attendee&apos;s attendance, providing a seamless and hassle-free
+              experience.
             </span>
           </div>
-        </Tabs.Panel>
-        <Tabs.Panel
-          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
-          value="fourth"
-        >
-          <div className="w-full md:w-1/2 border border-gray-300 rounded-xl mb-4 md:mb-0">
-            <img src="./Dashboard.png" className="object-fit rounded-xl" />
-          </div>
-          <div className="w-full md:w-1/2">
-            <h2 className="text-2xl md:text-4xl mb-4">
-              Facilitated communication
-            </h2>
-            <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6 mb-5">
-              EventBadge enhances communication channels between organizers and
-              participants through its integrated messaging feature. With the
-              ability to send bulk emails or targeted messages to specific
-              attendee groups, EventBadge enables seamless communication before,
-              during, and after the event. Whether it&apos;s sharing important
-              updates, sending reminders, or soliciting feedback, our platform
-              provides a convenient and centralized communication hub. Moreover,
-              EventBadge offers customizable email templates and scheduling
-              options, allowing organizers to tailor messages to their audience
-              and deliver them at optimal times. By facilitating clear and
-              efficient communication, EventBadge helps ensure that participants
-              stay informed and engaged, leading to a more successful and
-              impactful event experience for all involved.
-            </span>
-          </div>
-        </Tabs.Panel>
-        <Tabs.Panel
-          className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-x-10 py-0 md:py-10"
-          value="fifth"
-        >
+        </div>
+      </MantineCarousel.Slide>
+      <MantineCarousel.Slide>
+        <div className="h-full bg-white flex flex-col md:flex-row items-center justify-between rounded-xl gap-x-10 pt-5 pb-12 md:pt-0 md:pb-0 md:py-10 px-5 md:px-20 mx-5 md:mx-20 shadow-blue">
           <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
-            <img src="./Dashboard.png" className="object-fit rounded-xl" />
+            <img src="./Dashboard.png" className="object-cover rounded-xl" />
           </div>
           <div className="w-full md:w-1/2">
-            <h2 className="text-2xl md:text-4xl mb-4 pt-5 md:pt-0">
-              Centralized data management
-            </h2>
+            <h2 className="text-lg md:text-3xl">Facilitated communication</h2>
             <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6">
-              EventBadge serves as a comprehensive repository for all
-              event-related data, offering organizers a centralized platform to
-              manage participant information, event logistics, and analytics.
-              From attendee profiles to session schedules and registration
-              details, everything is stored securely within the EventBadge
-              system. Our intuitive dashboard provides easy access to real-time
-              insights and metrics, empowering organizers to make data-driven
-              decisions and optimize event performance. Furthermore, EventBadge
-              offers robust data privacy and security features, ensuring
-              compliance with regulations such as GDPR and CCPA. By centralizing
-              data management, EventBadge simplifies administrative tasks,
-              enhances transparency, and enables organizers to focus on
-              delivering a seamless and memorable event experience.
+              EventBadge allows you to send invitations via SMS, email, and
+              other communication channels. This feature ensures that your
+              guests receive the necessary information and stay informed
+              throughout the process, improving communication between your team
+              and attendees.
             </span>
           </div>
-        </Tabs.Panel>
-      </Tabs>
-    </div>
+        </div>
+      </MantineCarousel.Slide>
+      <MantineCarousel.Slide>
+        <div className="h-full bg-white flex flex-col md:flex-row items-center justify-between rounded-xl gap-x-10 pt-5 pb-12 md:pt-0 md:pb-0 md:py-10 px-5 md:px-20 mx-5 md:mx-20 shadow-blue">
+          <div className="w-full md:w-1/2 border border-gray-300 rounded-xl">
+            <img src="./Dashboard.png" className="object-cover rounded-xl" />
+          </div>
+          <div className="w-full md:w-1/2">
+            <h2 className="text-lg md:text-3xl">Centralized data management</h2>
+            <span className="text-sm md:text-md line-clamp-4 lg:line-clamp-6">
+              Through the use of robust technologies such as NestJS, TypeORM,
+              and PostgreSQL, EventBadge offers centralized data management,
+              ensuring the security and consistency of your event information.
+              This allows you to efficiently track participants, responses, and
+              other essential data.
+            </span>
+          </div>
+        </div>
+      </MantineCarousel.Slide>
+    </MantineCarousel>
   );
 }
 

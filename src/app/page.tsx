@@ -55,20 +55,39 @@ export default function Home() {
               <Introduction />
             </motion.div>
 
+            {/* First section - video */}
             <div className="h-screen py-20 px-40">
               <div className="bg-white h-full rounded-lg" />
             </div>
 
-            <Features />
+            {/* Second Screen - Intro */}
+            <div className="min-h-[40vh] flex flex-col items-center justify-center mx-5 lg:mx-40">
+              <span className="text-center text-xl lg:text-3xl leading-normal lg:leading-relaxed">
+                EventBadge is a{" "}
+                <strong className="text-blue-500">
+                  Software as a Service (SaaS)
+                </strong>{" "}
+                solution designed specifically to simplify{" "}
+                <strong className="text-blue-500">event management</strong>{" "}
+                within event companies.
+              </span>
+            </div>
 
-            <div className="max-w-screen px-4 py-8 lg:py-28 lg:px-6 mt-0 mx-auto">
+            {/* Third Screen - Features */}
+            <div>
+              <Features />
+            </div>
+
+            {/* Fourth section - pricing */}
+            <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 my-20">
               <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                <h2 className="mb-4 text-6xl tracking-tight font-bold">
+                <h2 className="mb-4 text-4xl tracking-tight font-bold">
                   The price of Event<span className="text-blue-500">Badge</span>
                 </h2>
-                <p className="mb-5 font-light sm:text-xl">
-                  The pricing for EventBadge plans varies depending on your
-                  needs. Choose the plan that best suits you.
+                <p className="mb-5 font-light text-gray-800 sm:text-xl">
+                  Here at Flowbite we focus on markets where technology,
+                  innovation, and capital can unlock long-term value and drive
+                  economic growth.
                 </p>
               </div>
               <Pricing />
